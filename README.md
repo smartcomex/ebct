@@ -1,2 +1,2 @@
 # ebct
-correios
+Empresa Brasileira de Correios e Telegrafos
