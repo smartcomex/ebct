@@ -10,7 +10,7 @@ type Departure struct {
 }
 
 type Flights struct {
-	FlightNumber         *string    `json:"flightNumber"`         // Flight number
+	FlightNumber         *int       `json:"flightNumber"`         // Flight number
 	AirlineCode          *string    `json:"airlineCode"`          // Airline code. This code must match the key ""code" contained in the return of the "Get Airline List" method
 	DepartureDate        *time.Time `json:"departureDate"`        // Date time in the format "YYYY-MM-DDTHH:MM:SSZ", where the letters T and Z are fixed values
 	DepartureAirportCode *string    `json:"departureAirportCode"` // Departure airport code/acronym

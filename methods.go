@@ -3,9 +3,11 @@ package ebct
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
 	"github.com/davecgh/go-spew/spew"
 	"io/ioutil"
 	"net/http"
+	"reflect"
 	"strings"
 )
 
@@ -64,7 +66,14 @@ func (c *Client) execute(method string, path string, params interface{}, headers
 
 			// add params
 			for key, value := range param {
-				query.Add(key, value.(string))
+				switch reflect.TypeOf(value).Kind() {
+				case reflect.Slice:
+					for _, val := range value.([]interface{}) {
+						query.Add(key, val.(string))
+					}
+				default:
+					query.Add(key, fmt.Sprintf("%v", value))
+				}
 			}
 
 			// set query string

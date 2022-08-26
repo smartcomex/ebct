@@ -11,3 +11,15 @@ func TestBalanceTackingNumber(t *testing.T) {
 	spew.Dump(vBal)
 	assert.NoError(t, err)
 }
+
+func TestUnitCodeBalance(t *testing.T) {
+	vBal, err := client.GetUnitCodeBalance()
+	spew.Dump(vBal)
+	assert.NoError(t, err)
+}
+
+func TestBalanceInput(t *testing.T) {
+	vBal, err := client.GetBalanceInput()
+	spew.Dump(vBal)
+	assert.NoError(t, err)
+}
