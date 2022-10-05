@@ -30,11 +30,15 @@ type UnitsRequestReturn struct {
 	RequestStatus    *string             `json:"requestStatus,omitempty"` // Contains the status of the request. Pending: Pending processing; Processing: In processing; Success: Processing was completed successfully. Error: An error has occurred in the processing of the information. The error message is displayed in the “errorMessage” field.
 	Request          *UnitsRequestAsync  `json:"request,omitempty"`       // Same as request Sent
 	UnitResponseList []UnitsResponseList `json:"unitResponseList,omitempty"`
+	ErrorMessage     *string             `json:"errorMessage,omitempty"`
+	ErrorDetails     []ErrorDetail       `json:"errorDetails,omitempty"`
 }
 
 type UnitsResponseList struct {
-	Sequence *int    `json:"sequence,omitempty"` // Sequencial number of the unit in the requisition.
-	UnitCode *string `json:"unitCode,omitempty"` // Unit number code generated
+	Sequence     *int          `json:"sequence,omitempty"` // Sequencial number of the unit in the requisition.
+	UnitCode     *string       `json:"unitCode,omitempty"` // Unit number code generated
+	ErrorMessage *string       `json:"errorMessage,omitempty"`
+	ErrorDetails []ErrorDetail `json:"errorDetails,omitempty"`
 }
 
 type UnitsRequestGetAsync struct {
@@ -42,11 +46,13 @@ type UnitsRequestGetAsync struct {
 }
 
 type UnitsCodesReturn struct {
-	RequestedQuantity *string `json:"requestedQuantity,omitempty"` // Request number returned by the API when calling the "Unit codes request" method.
-	AvailableQuantity *int    `json:"availableQuantity,omitempty"` // Number of unitCodes contained in the request
-	TotalUsed         *int    `json:"totalUsed,omitempty"`         // Number of unitCodes contained in the request and which have already been used
-	TotalUnused       *int    `json:"totalUnused,omitempty"`       // Number of unitCodes contained in the request that have not yet been used
-	Links             []Link  `json:"links,omitempty"`             // This link can be sent in a GET request to obtain details of the request whose identifier appears in the key "requestId".
+	RequestedQuantity *string       `json:"requestedQuantity,omitempty"` // Request number returned by the API when calling the "Unit codes request" method.
+	AvailableQuantity *int          `json:"availableQuantity,omitempty"` // Number of unitCodes contained in the request
+	TotalUsed         *int          `json:"totalUsed,omitempty"`         // Number of unitCodes contained in the request and which have already been used
+	TotalUnused       *int          `json:"totalUnused,omitempty"`       // Number of unitCodes contained in the request that have not yet been used
+	Links             []Link        `json:"links,omitempty"`             // This link can be sent in a GET request to obtain details of the request whose identifier appears in the key "requestId".
+	ErrorMessage      *string       `json:"errorMessage,omitempty"`
+	ErrorDetails      []ErrorDetail `json:"errorDetails,omitempty"`
 }
 
 type Link struct {
@@ -82,6 +88,8 @@ type UnitCodeCompleteReturn struct {
 	TotalUnused         *int                `json:"totalUnused"`         // Number of unitCodes contained in the request that have not yet been used.
 	UnusedCodes         []UnitsResponseList `json:"unusedCodes"`         // JSON arrays containing all unused unitCodes and their respective sequence
 	UsedCodes           []UnitsResponseList `json:"usedCodes"`           // JSON arrays containing all the unitCodes already used and their respective sequence
+	ErrorMessage        *string             `json:"errorMessage,omitempty"`
+	ErrorDetails        []ErrorDetail       `json:"errorDetails,omitempty"`
 }
 
 func (n UnitCodeCompleteReturn) Error() string {
@@ -100,6 +108,8 @@ type UnitsListCodeNumber struct {
 type UnitsDispatchReturn struct {
 	DispatchNumber *int                  `json:"dispatchNumber,omitempty"` // Customer control number to reference the dispatch of that container. This same number should be used as a parameter for generating the Delivery Bill (Similar to CN38 postal form), method CN38 Request (Async). This value cannot be repeated for different shipments
 	UnitList       []UnitsListCodeNumber `json:"unitList,omitempty"`       // Element where the objects contained in the container will be listed.
+	ErrorMessage   *string               `json:"errorMessage,omitempty"`
+	ErrorDetails   []ErrorDetail         `json:"errorDetails,omitempty"`
 }
 
 func (n UnitsDispatchReturn) Error() string {

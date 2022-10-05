@@ -58,6 +58,8 @@ func (n PackageRequest) Error() string {
 
 type PackageRequestReturn struct {
 	PackageResponseList []PackResponse `json:"packageResponseList"`
+	ErrorMessage        *string        `json:"errorMessage,omitempty"`
+	ErrorDetails        []ErrorDetail  `json:"errorDetails,omitempty"`
 }
 
 type PackResponse struct {

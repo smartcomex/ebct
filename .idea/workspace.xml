@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13551165-743a-4986-ae45-f29818cc3683" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/packages_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/packages_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cn38.go" beforeDir="false" afterPath="$PROJECT_DIR$/cn38.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cn38_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/cn38_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages.go" beforeDir="false" afterPath="$PROJECT_DIR$/packages.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/token_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/token_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/units.go" beforeDir="false" afterPath="$PROJECT_DIR$/units.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/units_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/units_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,36 +51,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "configurable..is.expanded": "false",
-    "configurable.GoLibrariesConfigurable.is.expanded": "true",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "C:/Work/go/src/github.com/bcjti/ebct",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "go.vgo"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;configurable..is.expanded&quot;: &quot;false&quot;,
+    &quot;configurable.GoLibrariesConfigurable.is.expanded&quot;: &quot;true&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Work/go/src/github.com/bcjti/ebct&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;go.vgo&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Work\go\src\github.com\bcjti\ebct" />
       <recent name="C:\Work\go\src\github.com\bcjti\ebct\requests" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestPackageRquest in ebct">
+  <component name="RunManager" selected="Go Test.TestCn38AsyncGetRequest in ebct">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="ebct" />
       <working_directory value="$PROJECT_DIR$" />
@@ -84,7 +90,7 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestBalanceInput in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCn38AsyncGetRequest in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="ebct" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
@@ -92,18 +98,7 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestBalanceInput\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestCn38ListConfirmedDepartureGet in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="ebct" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="ebct" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestCn38ListConfirmedDepartureGet\E$" />
+      <pattern value="^\QTestCn38AsyncGetRequest\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestCn38ListGeneratedByInvoiceGet in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -117,7 +112,7 @@
       <pattern value="^\QTestCn38ListGeneratedByInvoiceGet\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestCn38ListGeneratedDepartureGet in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCn38Request in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="ebct" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
@@ -125,10 +120,10 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestCn38ListGeneratedDepartureGet\E$" />
+      <pattern value="^\QTestCn38Request\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestPackageRquest in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCn38UnitCode in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="ebct" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
@@ -136,7 +131,18 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestPackageRquest\E$" />
+      <pattern value="^\QTestCn38UnitCode\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestUnitsRequestGet in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="ebct" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="ebct" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestUnitsRequestGet\E$" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
@@ -151,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestPackageRquest in ebct" />
-        <item itemvalue="Go Test.TestBalanceInput in ebct" />
+        <item itemvalue="Go Test.TestCn38AsyncGetRequest in ebct" />
         <item itemvalue="Go Test.TestCn38ListGeneratedByInvoiceGet in ebct" />
-        <item itemvalue="Go Test.TestCn38ListGeneratedDepartureGet in ebct" />
-        <item itemvalue="Go Test.TestCn38ListConfirmedDepartureGet in ebct" />
+        <item itemvalue="Go Test.TestCn38UnitCode in ebct" />
+        <item itemvalue="Go Test.TestCn38Request in ebct" />
+        <item itemvalue="Go Test.TestUnitsRequestGet in ebct" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +201,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/units.go</url>
-          <line>173</line>
+          <line>183</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
@@ -207,6 +213,16 @@
           <url>file://$PROJECT_DIR$/methods.go</url>
           <line>57</line>
           <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/cn38_test.go</url>
+          <line>35</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/methods.go</url>
+          <line>127</line>
+          <option name="timeStamp" value="48" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

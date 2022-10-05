@@ -8,9 +8,9 @@ import (
 )
 
 const UnitAsync = `{
-    "dispatchNumber": 733,
-    "originCountry": "US",
-    "originOperatorName": "SKYG",
+    "dispatchNumber": 61523,
+    "originCountry": "BR",
+    "originOperatorName": "FOXB",
     "destinationOperatorName": "SAOD",
     "postalCategoryCode": "A",
     "serviceSubclassCode": "NX",
@@ -26,9 +26,9 @@ const UnitAsync = `{
 }`
 
 const Unit = `{
-    "dispatchNumber": 12,
-    "originCountry": "US",
-    "originOperatorName": "SKYG",
+    "dispatchNumber": 951915,
+    "originCountry": "CN",
+    "originOperatorName": "FOXB",
     "destinationOperatorName": "SAOD",
     "postalCategoryCode": "A",
     "serviceSubclassCode": "NX",
@@ -76,10 +76,18 @@ func TestUnitRequest(t *testing.T) {
 	if err != nil {
 		spew.Dump(err)
 	}
+	var packList *UnitsRequestReturn
 
-	packList, err := client.PostUnitsRequest(aUnitAsync)
+	//for i := 1; i < 999999; i++ {
+	//	aUnitAsync.DispatchNumber = IntPtr(i)
+	packList, err = client.PostUnitsRequest(aUnitAsync)
+	//	if err == nil {
+	//		break
+	//	}
+	//}
 	spew.Dump(packList)
 	assert.NoError(t, err)
+	spew.Dump(aUnitAsync)
 }
 
 func TestUnitAsyncGetRequest(t *testing.T) {

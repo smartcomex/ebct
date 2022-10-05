@@ -16,14 +16,21 @@ type Cn38RequestAsyncInput struct {
 }
 
 type Cn38RequestReturn struct {
-	RequestId      *string `json:"requestId,omitempty"`     // Value generated to identify the request. This data must be passed as the value of the key "requestid" of the GET method "Get CN38 async request info", used to obtain the delivery invoice number.
-	DispatchNumber []int   `json:"dispatchNumber"`          // Contains the list of dispatchNumbers informed in the method request.
-	RequestStatus  *string `json:"requestStatus,omitempty"` // Contains the status of the request. Pending: Pending processing; Processing: In processing; Success: Processing was completed successfully. Error: An error has occurred in the processing of the information. The error message is displayed in the “errorMessage” field.
-	Cn38Code       *string `json:"cn38Code,omitempty"`      // Invoice number to be informed on form CN38 / Delivery Invoice maximum size = 12 characters
+	RequestId      *string       `json:"requestId,omitempty"`     // Value generated to identify the request. This data must be passed as the value of the key "requestid" of the GET method "Get CN38 async request info", used to obtain the delivery invoice number.
+	DispatchNumber []int         `json:"dispatchNumbers"`         // Contains the list of dispatchNumbers informed in the method request.
+	RequestStatus  *string       `json:"requestStatus,omitempty"` // Contains the status of the request. Pending: Pending processing; Processing: In processing; Success: Processing was completed successfully. Error: An error has occurred in the processing of the information. The error message is displayed in the “errorMessage” field.
+	Cn38Code       *string       `json:"cn38Code,omitempty"`      // Invoice number to be informed on form CN38 / Delivery Invoice maximum size = 12 characters
+	ErrorMessage   *string       `json:"errorMessage,omitempty"`
+	ErrorDetails   []ErrorDetail `json:"errorDetails,omitempty"`
 }
 
 type Cn38RequestGetAsync struct {
 	RequestId *string `json:"requestId,omitempty"`
+}
+
+type ErrorDetail struct {
+	ObjectName *string `json:"objectName,omitempty"`
+	Message    *string `json:"message,omitempty"`
 }
 
 func (n Cn38RequestReturn) Error() string {
@@ -40,8 +47,10 @@ type Cn38UnitCodes struct {
 }
 
 type Cn38UnitCodesReturn struct {
-	RequestId     *string `json:"requestId,omitempty"`     // Receives a list of unitizers/bags and the packages contained in each one
-	RequestStatus *string `json:"requestStatus,omitempty"` // List of packages (trackingNumbers) contained in each bag (unitCode)
+	RequestId     *string       `json:"requestId,omitempty"`     // Receives a list of unitizers/bags and the packages contained in each one
+	RequestStatus *string       `json:"requestStatus,omitempty"` // List of packages (trackingNumbers) contained in each bag (unitCode)
+	ErrorMessage  *string       `json:"errorMessage,omitempty"`
+	ErrorDetails  []ErrorDetail `json:"errorDetails,omitempty"`
 }
 
 func (n Cn38UnitCodesReturn) Error() string {
@@ -53,11 +62,13 @@ type Cn38ListDeparture struct {
 }
 
 type Cn38Itens struct {
-	Cn38Code                  string    `json:"cn38Code"`                  // Bill number
-	GenerationDate            time.Time `json:"generationDate"`            // Generation date
-	DepartureConfirmed        bool      `json:"departureConfirmed"`        // Boarding status
-	DepartureConfirmationDate time.Time `json:"departureConfirmationDate"` // Departure Confirmation Date
-	FlightList                []Flights `json:"flightList"`
+	Cn38Code                  string        `json:"cn38Code"`                  // Bill number
+	GenerationDate            time.Time     `json:"generationDate"`            // Generation date
+	DepartureConfirmed        bool          `json:"departureConfirmed"`        // Boarding status
+	DepartureConfirmationDate time.Time     `json:"departureConfirmationDate"` // Departure Confirmation Date
+	FlightList                []Flights     `json:"flightList"`
+	ErrorMessage              *string       `json:"errorMessage,omitempty"`
+	ErrorDetails              []ErrorDetail `json:"errorDetails,omitempty"`
 }
 
 type Cn38Page struct {
@@ -71,8 +82,10 @@ type Cn38Page struct {
 }
 
 type Cn38DepartureList struct {
-	Itens []Cn38Itens `json:"itens"`
-	Page  Cn38Page    `json:"page"`
+	Itens        []Cn38Itens   `json:"itens"`
+	Page         Cn38Page      `json:"page"`
+	ErrorMessage *string       `json:"errorMessage,omitempty"`
+	ErrorDetails []ErrorDetail `json:"errorDetails,omitempty"`
 }
 
 func (n Cn38DepartureList) Error() string {

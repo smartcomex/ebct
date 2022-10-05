@@ -23,7 +23,7 @@ const Cn38UnitCode = `{"unitList": [
 func TestCn38Request(t *testing.T) {
 
 	aCn38Request := &Cn38RequestAsyncInput{
-		DispatchNumbers: []int{151, 4587},
+		DispatchNumbers: []int{953},
 	}
 
 	requestReturn, err := client.PostCn38Request(aCn38Request)
@@ -33,7 +33,7 @@ func TestCn38Request(t *testing.T) {
 
 func TestCn38AsyncGetRequest(t *testing.T) {
 
-	requestReturn, err := client.GetCn38Async("b34fdc7c-d9fc-4a99-8fdc-7cd9fcfa998e")
+	requestReturn, err := client.GetCn38Async("85092678-4a81-410b-8926-784a81910b29")
 	spew.Dump(requestReturn)
 	assert.NoError(t, err)
 }
@@ -76,7 +76,7 @@ func TestCn38ListGeneratedDepartureGet(t *testing.T) {
 
 func TestCn38ListGeneratedByInvoiceGet(t *testing.T) {
 
-	requestReturn, err := client.GetCn38ListGeneratedByInvoice("7462022")
+	requestReturn, err := client.GetCn38ListGeneratedByInvoice("9012021")
 	spew.Dump(requestReturn)
 	assert.NoError(t, err)
 }
