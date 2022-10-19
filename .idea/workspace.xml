@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="13551165-743a-4986-ae45-f29818cc3683" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cn38.go" beforeDir="false" afterPath="$PROJECT_DIR$/cn38.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cn38_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/cn38_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages.go" beforeDir="false" afterPath="$PROJECT_DIR$/packages.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/packages_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/token_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/token_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/units.go" beforeDir="false" afterPath="$PROJECT_DIR$/units.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trackingnumbers.go" beforeDir="false" afterPath="$PROJECT_DIR$/trackingnumbers.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/units_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/units_test.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +78,7 @@
       <recent name="C:\Work\go\src\github.com\bcjti\ebct\requests" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestCn38AsyncGetRequest in ebct">
+  <component name="RunManager" selected="Go Test.TestBalanceTackingNumber in ebct">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="ebct" />
       <working_directory value="$PROJECT_DIR$" />
@@ -88,6 +86,17 @@
       <package value="github.com/bcjti/ebct" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestBalanceTackingNumber in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="ebct" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="ebct" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestBalanceTackingNumber\E$" />
       <method v="2" />
     </configuration>
     <configuration name="TestCn38AsyncGetRequest in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -101,7 +110,7 @@
       <pattern value="^\QTestCn38AsyncGetRequest\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestCn38ListGeneratedByInvoiceGet in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestLogin in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="ebct" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
@@ -109,10 +118,10 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestCn38ListGeneratedByInvoiceGet\E$" />
+      <pattern value="^\QTestLogin\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestCn38Request in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestTrackingNumbersGet in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="ebct" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
@@ -120,10 +129,10 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestCn38Request\E$" />
+      <pattern value="^\QTestTrackingNumbersGet\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestCn38UnitCode in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestUnitCodeBalance in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="ebct" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
@@ -131,18 +140,7 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestCn38UnitCode\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestUnitsRequestGet in ebct" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="ebct" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="ebct" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestUnitsRequestGet\E$" />
+      <pattern value="^\QTestUnitCodeBalance\E$" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
@@ -157,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestBalanceTackingNumber in ebct" />
+        <item itemvalue="Go Test.TestTrackingNumbersGet in ebct" />
+        <item itemvalue="Go Test.TestUnitCodeBalance in ebct" />
+        <item itemvalue="Go Test.TestLogin in ebct" />
         <item itemvalue="Go Test.TestCn38AsyncGetRequest in ebct" />
-        <item itemvalue="Go Test.TestCn38ListGeneratedByInvoiceGet in ebct" />
-        <item itemvalue="Go Test.TestCn38UnitCode in ebct" />
-        <item itemvalue="Go Test.TestCn38Request in ebct" />
-        <item itemvalue="Go Test.TestUnitsRequestGet in ebct" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +194,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/trackingnumbers.go</url>
-          <line>172</line>
+          <line>174</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">

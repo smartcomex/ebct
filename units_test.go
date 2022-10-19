@@ -8,8 +8,26 @@ import (
 )
 
 const UnitAsync = `{
-    "dispatchNumber": 61523,
+    "dispatchNumber": 953,
     "originCountry": "BR",
+    "originOperatorName": "FOXB",
+    "destinationOperatorName": "SAOD",
+    "postalCategoryCode": "A",
+    "serviceSubclassCode": "NX",
+    "unitList": [
+        {
+            "sequence": 1,
+            "unitType": 1,
+            "trackingNumbers": [
+                "NX006288545BR"
+            ]
+        }
+    ]
+}`
+
+const Unit = `{
+    "dispatchNumber": 61523,
+    "originCountry": "CN",
     "originOperatorName": "FOXB",
     "destinationOperatorName": "SAOD",
     "postalCategoryCode": "A",
@@ -25,29 +43,10 @@ const UnitAsync = `{
     ]
 }`
 
-const Unit = `{
-    "dispatchNumber": 951915,
-    "originCountry": "CN",
-    "originOperatorName": "FOXB",
-    "destinationOperatorName": "SAOD",
-    "postalCategoryCode": "A",
-    "serviceSubclassCode": "NX",
-    "unitList": [
-        {
-            "sequence": 1,
-            "unitType": 1,
-            "trackingNumbers": [
-                "NX000931205BR",
-                "NX000931219BR"
-            ]
-        }
-    ]
-}`
-
 const UnitCodes = `{
     "originCountry": "CN",
     "postalCategoryCode": "A",
-    "serviceSubclassCode": "XL",
+    "serviceSubclassCode": "NL",
     "unitType": 1,
     "quantity": 1
 }`
@@ -92,7 +91,7 @@ func TestUnitRequest(t *testing.T) {
 
 func TestUnitAsyncGetRequest(t *testing.T) {
 
-	packList, err := client.GetUnitsRequestAsync("f44435ce-1276-4c7d-8435-ce1276dc7d95")
+	packList, err := client.GetUnitsRequestAsync("7d607b7b-9848-41b1-a07b-7b9848e1b115")
 	spew.Dump(packList)
 	assert.NoError(t, err)
 }
@@ -135,7 +134,7 @@ func TestUnitsRequestGet(t *testing.T) {
 
 func TestUnitsRequestDelete(t *testing.T) {
 
-	packList, err := client.DeleteUnitsCodesRequest("USDASDBRDDDDDIX00321001000024")
+	packList, err := client.DeleteUnitsCodesRequest("BRFOXBBRSAODANX20953001000001")
 	spew.Dump(packList)
 	assert.NoError(t, err)
 }
